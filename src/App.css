@@ -5,3 +5,7 @@ body {
   font-style: normal;
 }
 /* Website theme: #A28B55 #86AB89 #CBE2B5 #E7FBE6*/
+
+.contentbody {
+  display: flex;
+}
