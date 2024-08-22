@@ -1,0 +1,24 @@
+.conSec {
+  width: 100%;
+  min-height: calc(100dvh - 70px);
+}
+.conSec > h1{
+  font-size: 1.3em;
+}
+
+.conSec > .cardStorage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .conSec {
+    min-width: 768px;
+    overflow-x: scroll;
+  }
+}
+
+
+
+
+

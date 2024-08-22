@@ -1,0 +1,23 @@
+.card {
+  flex-basis: 20%;
+  min-height: 300px;
+}
+
+@media screen and (max-width: 1500px) {
+  .card {
+    flex-basis: 25%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    flex-basis: 33%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis: 33%;
+    max-width: 156px;
+  }
+}
