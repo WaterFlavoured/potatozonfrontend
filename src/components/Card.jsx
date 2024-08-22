@@ -26,7 +26,7 @@ function Card({addToCart}) {
 
   return (
     <div className='card'>
-      <img src='https://via.placeholder.com/150' alt="" />
+      <img src='https://via.placeholder.com/300' alt="" />
       <h3>Product Name</h3>
       <div className='rating'>
         {stars(rating)}
@@ -35,7 +35,7 @@ function Card({addToCart}) {
       <p>bought</p>
       <h2>$9.99</h2>
       <p>Free Shipping <b>Sat, Aug 24</b></p>
-      <button onClick={handleClick}>Add to Cart</button>
+      <button onClick={handleClick} className='cartBut'>Add to Cart</button>
     </div>
   )
 }

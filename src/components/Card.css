@@ -1,21 +1,42 @@
 .card {
-  flex-basis: 20%;
+  flex: 0 0 calc((100% / 6) - 10px);
+  
   min-height: 300px;
+  padding: 5px;
+  
 }
 
 .rating {
   display: flex;
   align-items: center;
 }
+
+.cartBut {
+  padding: 7px 14px;
+  background-color: #86AB89;
+  border: none;
+  border-radius: 20px;
+}
+
+.cartBut:hover {
+  background-color: #A28B55;
+}
+
+.card > img {
+  width: 100%;
+  height: auto;
+}
 @media screen and (max-width: 1500px) {
   .card {
-    flex-basis: 25%;
+    flex: 0 0 calc(20% - 10px);
+    
   }
 }
 
 @media screen and (max-width: 1000px) {
   .card {
-    flex-basis: 33%;
+    flex: 0 0 calc(25% - 10px);
+    
   }
 }
 
