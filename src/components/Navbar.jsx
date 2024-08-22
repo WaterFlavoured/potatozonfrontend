@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '/image.png'
-function Navbar() {
+function Navbar({cart}) {
   return (
     <nav>
       <div className='logoAndImageCom'>
@@ -13,7 +13,7 @@ function Navbar() {
         <button type='submit' className='subButton'>Search</button>
       </form>
       <ul>
-        <li>Cart</li>
+        <li>Cart ({cart})</li>
         <li>Account</li>
       </ul>
     </nav>

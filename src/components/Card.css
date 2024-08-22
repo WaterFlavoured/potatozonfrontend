@@ -3,6 +3,10 @@
   min-height: 300px;
 }
 
+.rating {
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 1500px) {
   .card {
     flex-basis: 25%;
