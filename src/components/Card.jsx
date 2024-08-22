@@ -1,14 +1,13 @@
 import React from 'react'
 import './Card.css'
 
-import image from '/src/assets/contentimage.png'
-function Card({addToCart, price}) {
+function Card({addToCart, price, rating, numbought, title, totalRatings, link}) {
   // Temp data
   // const price = {price};
-  const rating = 4.5;
-  const totalRatings = 100;
-  const numbought = 210;
-  const title = 'Cobra Wired Gaming Mouse: 58g Lightweight Design - Gen-3 Optical Switches - Chroma RGB Lighting with Underglow - Precise 8500 DPI'
+  // const rating = 4.5;
+  // const totalRatings = 100;
+  // const numbought = 210;
+  // const title = 'Cobra Wired Gaming Mouse: 58g Lightweight Design - Gen-3 Optical Switches - Chroma RGB Lighting with Underglow - Precise 8500 DPI'
   const handleClick = () => {
     addToCart()
   }
@@ -43,8 +42,8 @@ function Card({addToCart, price}) {
 
   return (
     <div className='card'>
-      <img src={image} alt="" />
-      {title.length < 150 ? <h3>{title.substring()}</h3> : <h3>{title.slice(0, 150)}...</h3>}
+      <img src={link} alt="" />
+      {title.length < 150 ? <h3>{title}</h3> : <h3>{title.slice(0, 150)}...</h3>}
       <div className='rating'>
         {stars(rating)}
         <p>{totalRatings}</p>  

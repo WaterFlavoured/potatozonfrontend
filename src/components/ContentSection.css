@@ -1,7 +1,6 @@
 .conSec {
   width: 100%;
   min-height: calc(100dvh - 70px);
-  border: 1px solid #CBE2B5;
 }
 .conSec > h1{
   font-size: 1.3em;
@@ -14,8 +13,13 @@
 
 .conSec > h1 {
   margin-left: 5px;
+  margin-bottom: 0px;
 }
-
+.conSec > p {
+  margin-top: 0px;
+  margin-left: 5px;
+  padding-bottom: 5px;
+}
 @media screen and (max-width: 768px) {
   .conSec {
     min-width: 768px;
