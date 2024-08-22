@@ -6,12 +6,12 @@ function ContentSection({addToCart}) {
     addToCart()
   }
 
-  
+  const price = 49.99;
   return (
     <div className='conSec'>
       <h1>Results</h1>
       <div className='cardStorage'>
-        <Card addToCart={addToCart}/>
+        <Card addToCart={addToCart} price={price}/>
         <Card addToCart={addToCart}/>
         <Card addToCart={addToCart}/>
         <Card addToCart={addToCart}/>

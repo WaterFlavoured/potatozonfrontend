@@ -1,9 +1,14 @@
 import React from 'react'
 import './Card.css'
-function Card({addToCart}) {
+
+import image from '/src/assets/contentimage.png'
+function Card({addToCart, price}) {
   // Temp data
+  // const price = {price};
   const rating = 4.5;
   const totalRatings = 100;
+  const numbought = 210;
+  const title = 'Cobra Wired Gaming Mouse: 58g Lightweight Design - Gen-3 Optical Switches - Chroma RGB Lighting with Underglow - Precise 8500 DPI'
   const handleClick = () => {
     addToCart()
   }
@@ -24,16 +29,28 @@ function Card({addToCart}) {
     }
   }
 
+  const bought = (num) => {
+    const asdf = Math.floor(num/100)*100
+
+    if (num < 50) {
+      return <span><br /></span>
+    } else if (num < 100) {
+      return <span>50+ bought</span>
+    } else {
+      return <span>{asdf}+ bought</span>
+    }
+  }
+
   return (
     <div className='card'>
-      <img src='https://via.placeholder.com/300' alt="" />
-      <h3>Product Name</h3>
+      <img src={image} alt="" />
+      {title.length < 150 ? <h3>{title.substring()}</h3> : <h3>{title.slice(0, 150)}...</h3>}
       <div className='rating'>
         {stars(rating)}
         <p>{totalRatings}</p>  
       </div>
-      <p>bought</p>
-      <h2>$9.99</h2>
+      <p className='numBought'>{bought(numbought)}</p>
+      <h2>${price}</h2>
       <p>Free Shipping <b>Sat, Aug 24</b></p>
       <button onClick={handleClick} className='cartBut'>Add to Cart</button>
     </div>

@@ -5,7 +5,7 @@ import ContentSection from './components/ContentSection.jsx'
 import Sidebar from './components/Sidebar.jsx'
 function App() {
   const [cart, setCart] = useState(0)
-
+  
   const addToCart = () => {
     setCart((cart)=>cart+1)
   }
@@ -17,7 +17,6 @@ function App() {
         <Sidebar />
         <ContentSection addToCart={addToCart}/>
       </div>
-      
     </>
   )
 }

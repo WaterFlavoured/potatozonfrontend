@@ -9,6 +9,7 @@
 .rating {
   display: flex;
   align-items: center;
+  height: 30px;
 }
 
 .cartBut {
@@ -25,6 +26,18 @@
 .card > img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+}
+
+.card > h3{
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.numBought {
+  margin-top: -5px;
+  font-size: 0.7em;
+  color: #86AB89;
 }
 @media screen and (max-width: 1500px) {
   .card {
