@@ -1,20 +1,22 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '/image.png'
+import { Link } from 'react-router-dom'
 function Navbar({cart}) {
+
   return (
     <nav>
-      <div className='logoAndImageCom'>
-        <img src={logo} alt="" />
+      <Link to='/'className='logoAndImageCom'>
+        <img src={logo} alt=""/>
         <h1 className='logotitle'>POTATOZON</h1>
-      </div>
+      </Link>
       <form className='searchbar'>
         <input type="text" className='bar' placeholder='Search Potatozon.ca'/>
         <button type='submit' className='subButton'>Search</button>
       </form>
       <ul>
-        <li>Cart ({cart})</li>
-        <li>Account</li>
+        <li><Link to='/cart' className='link'>Cart ({cart})</Link></li>
+        <li><Link to='/account' className='link'>Account</Link></li>
       </ul>
     </nav>
   )

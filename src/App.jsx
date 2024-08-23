@@ -1,22 +1,31 @@
 import { useState } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+
+
 import Navbar from './components/Navbar.jsx'
-import ContentSection from './components/ContentSection.jsx'
-import Sidebar from './components/Sidebar.jsx'
+import SearchResults from './pages/SearchResults.jsx'
+import Account from './pages/Account.jsx'
+import Cart from './pages/Cart.jsx'
+
+import './App.css'
+
 function App() {
-  const [cart, setCart] = useState(0)
-  
+  const [cartCount, setCartCount] = useState(0)
+
   const addToCart = () => {
-    setCart((cart)=>cart+1)
+    setCartCount((cart)=>cart+1)
   }
 
   return (
     <>
-      <Navbar cart={cart}/>
-      <div className='contentbody'>
-        <Sidebar />
-        <ContentSection addToCart={addToCart}/>
-      </div>
+      <BrowserRouter>
+        <Navbar cart={0}/>
+        <Routes>
+          <Route path='/' element={<SearchResults addToCart={addToCart}/>} />
+          <Route path='/account' element={<Account />} />
+          <Route path='/cart' element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

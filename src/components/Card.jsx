@@ -43,7 +43,7 @@ function Card({addToCart, price, rating, numbought, title, totalRatings, link}) 
   return (
     <div className='card'>
       <img src={link} alt="" />
-      {title.length < 150 ? <h3>{title}</h3> : <h3>{title.slice(0, 150)}...</h3>}
+      {title.length < 150 ? <a href=''>{title}</a> : <a href=''>{title.slice(0, 150)}...</a>}
       <div className='rating'>
         {stars(rating)}
         <p>{totalRatings}</p>  

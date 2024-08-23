@@ -1,9 +1,7 @@
 .card {
-  flex: 0 0 calc((100% / 6) - 10px);
-  
+  flex: 0 0 calc(20% - 10px);
   min-height: 300px;
   padding: 5px;
-  
 }
 
 .rating {
@@ -34,6 +32,16 @@
   margin-bottom: 0px;
 }
 
+.card > a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.card > a:hover {
+  color: #A28B55;
+}
+
 .numBought {
   margin-top: -5px;
   font-size: 0.7em;
@@ -41,15 +49,13 @@
 }
 @media screen and (max-width: 1500px) {
   .card {
-    flex: 0 0 calc(20% - 10px);
-    
+    flex: 0 0 calc(25% - 10px);
   }
 }
 
 @media screen and (max-width: 1000px) {
   .card {
-    flex: 0 0 calc(25% - 10px);
-    
+    flex: 0 0 calc(33% - 10px);
   }
 }
 
