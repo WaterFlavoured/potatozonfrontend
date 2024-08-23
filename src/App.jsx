@@ -6,6 +6,7 @@ import Navbar from './components/Navbar.jsx'
 import SearchResults from './pages/SearchResults.jsx'
 import Account from './pages/Account.jsx'
 import Cart from './pages/Cart.jsx'
+import ProductPage from './pages/ProductPage.jsx'
 
 import './App.css'
 
@@ -38,6 +39,7 @@ function App() {
           <Route path='/' element={<SearchResults addToCart={addToCart} product={product}/>} />
           <Route path='/account' element={<Account />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/product' element={<ProductPage />}/>
         </Routes>
       </BrowserRouter>
     </>

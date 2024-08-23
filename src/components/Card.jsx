@@ -1,17 +1,13 @@
 import React from 'react'
 import './Card.css'
-
+import { Link } from 'react-router-dom'
 function Card({addToCart, price, rating, numbought, title, totalRatings, link}) {
-  // Temp data
-  // const price = {price};
-  // const rating = 4.5;
-  // const totalRatings = 100;
-  // const numbought = 210;
-  // const title = 'Cobra Wired Gaming Mouse: 58g Lightweight Design - Gen-3 Optical Switches - Chroma RGB Lighting with Underglow - Precise 8500 DPI'
+  // Function to add item to cart (a bit temporary for now) i need to add the product to the cart
   const handleClick = () => {
     addToCart()
   }
 
+  // Function to display stars based on rating
   const stars = (rating) => {
     if (rating < 1) {
       return <div>☆☆☆☆☆</div>
@@ -28,6 +24,7 @@ function Card({addToCart, price, rating, numbought, title, totalRatings, link}) 
     }
   }
 
+  // Function to display number of items bought
   const bought = (num) => {
     const asdf = Math.floor(num/100)*100
 
@@ -43,7 +40,7 @@ function Card({addToCart, price, rating, numbought, title, totalRatings, link}) 
   return (
     <div className='card'>
       <img src={link} alt="" />
-      {title.length < 150 ? <a href=''>{title}</a> : <a href=''>{title.slice(0, 150)}...</a>}
+      {title.length < 150 ? <Link to='/product'>{title}</Link> : <Link to='/product'>{title.slice(0, 150)}...</Link>}
       <div className='rating'>
         {stars(rating)}
         <p>{totalRatings}</p>  
