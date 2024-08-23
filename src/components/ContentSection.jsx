@@ -3,7 +3,7 @@ import './ContentSection.css'
 import Card from './Card.jsx'
 
 import image from '/src/assets/contentimage.png'
-function ContentSection({addToCart}) {
+function ContentSection({addToCart, product}) {
   const handleClick = () => {
     addToCart()
   }
@@ -17,17 +17,18 @@ function ContentSection({addToCart}) {
       <h1>Results</h1>
       <p>Check each product page for other buying options.</p>
       <div className='cardStorage'>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
-        <Card addToCart={addToCart} price={price} totalRatings={totalRatings} rating={rating} numbought={numbought} title={title} link={image}/>
+        {product && product.map((product) => (
+          <Card 
+            key={product.productId} 
+            addToCart={addToCart} 
+            price={product.cost} 
+            totalRatings={product.totalRating} 
+            rating={product.rating} 
+            numbought={product.bought} 
+            title={product.name} 
+            link={image}
+          />
+        ))}
       </div>
     </div>
   )
